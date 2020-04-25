@@ -14,7 +14,8 @@
             </div>
             
             {!! Form::submit('登録', ['class' => 'btn btn-primary']) !!}
-            
+            {!! link_to_route('tasks.index', 'タスク一覧へ戻る',[], ['class' => 'btn btn-secondary']) !!}            
+        
         {!! Form::close() !!}
             
         </div>

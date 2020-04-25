@@ -44,6 +44,11 @@ class TasksController extends Controller
      */
     public function store(Request $request)
     {
+        //必須、191文字以内
+        $this->validate($request, [
+            'content' => 'required|max:191',
+            ]);
+            
         $task = new Task;
         $task->content = $request->content;
         $task->save();
